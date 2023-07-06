@@ -5,6 +5,8 @@ import Main from "../Laout/Main";
 import ErrorPage from "../shared/ErrorPage";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import Home from "../Pages/Home/Home";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
      {
@@ -20,10 +22,10 @@ export const router = createBrowserRouter([
                     path: 'login',
                     element: <Login></Login>
                },
-               // {
-               //      path: "/",
-               //      element: <Home></Home>
-               // },
+               {
+                    path: "/",
+                    element: <PrivateRoute><Home></Home></PrivateRoute>
+               },
           ]
      },
     

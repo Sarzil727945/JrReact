@@ -3,7 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai'
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import { sendEmailVerification, updateProfile } from 'firebase/auth';
+import { updateProfile } from 'firebase/auth';
 import Swal from 'sweetalert2';
 
 const Register = () => {
@@ -110,15 +110,6 @@ const Register = () => {
      }
      // valid email function end
 
-     //   // emailVerification part start 
-     //   const Verification = (currentUser) => {
-     //      sendEmailVerification(currentUser)
-     //           .then(() => {
-     //                alert('Verification your email')
-     //           });
-     // }
-     // // emailVerification part end
-
      const upDataUser = (user, name, photoUrl) => {
           updateProfile(user, {
                displayName: name,
@@ -138,7 +129,7 @@ const Register = () => {
                     <img className=' img-fluid w-100 imgHeight' src='https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7873.jpg?w=740&t=st=1684338884~exp=1684339484~hmac=29bb2f06c8bc57224e5cdbbbfb70e230a9791b942d420cc8f97b06ff27106d20' alt="" />
                </div>
                <div className=' col-lg-6 '>
-                    <div className=' my-lg-5'>
+                    <div className=' mt-lg-4'>
                          <Form onSubmit={handelRegister}>
                               <div className='border rounded px-5 py-4 shadow-lg '>
                                    <h1 className='text-center my-3'>Register </h1>

@@ -29,6 +29,7 @@ const AuthProvider = ({ children }) => {
      useEffect(() => {
           const unSubScript = onAuthStateChanged(auth, currentUser => {
                setUser(currentUser)
+               setLoading(false)
 
                // // jwt part start
                // if (currentUser) {
